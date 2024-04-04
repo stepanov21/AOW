@@ -34,6 +34,18 @@ document.addEventListener("DOMContentLoaded", function () {
 			event.preventDefault();
 		});
 	});
+
+	var menuItem = document.querySelectorAll('.menu__link')
+
+	var closeMobileMenu = () => {
+		$('.menu__body').removeClass('active');
+		$('.icon-menu').removeClass('active');
+		$('body').removeClass('lock');
+	}
+
+	menuItem.forEach(function (item) {
+		item.addEventListener("click", closeMobileMenu);
+	});
 });
 
 document.addEventListener("DOMContentLoaded", function () {
